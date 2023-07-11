@@ -65,7 +65,7 @@ file_names$string <- paste0(base_dir_path,
                             file_names$well,
                             "_t",
                             file_names$frame_num,
-                            "_stab.jpg")
+                            "_stab.tif")
 
 
 # Subsetting and saving, with data leakage fix ----------------------------
@@ -79,7 +79,7 @@ all(duplicated(sampled_file_names[ , 1:5])) # FALSE
 
 # Removing one it chose that didn't exist for whatever reason
 sampled_file_names <- sampled_file_names %>%
-  filter(string != "/xdisk/rpalaniv/cjperkins1/chronic_hs/images/normalized_stabilized/2023-06-20_run1_26C_normalized_stabilized/well_A1/2023-06-20_run1_26C_A1_t000_stab.jpg")
+  filter(string != "/xdisk/rpalaniv/cjperkins1/chronic_hs/images/normalized_stabilized/2023-06-20_run1_26C_normalized_stabilized/well_A1/2023-06-20_run1_26C_A1_t000_stab.tif")
 
 
 # Randomizing
